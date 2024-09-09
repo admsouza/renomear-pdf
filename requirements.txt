@@ -1,4 +1,4 @@
-﻿2captcha-python==1.5.0
+2captcha-python==1.5.0
 annotated-types==0.7.0
 asttokens==2.4.1
 attrs==23.2.0
@@ -38,6 +38,7 @@ fonttools==4.53.0
 fsspec==2024.6.1
 future==1.0.0
 googletrans==4.0.0rc1
+gunicorn==23.0.0
 h11==0.9.0
 h2==3.2.0
 hpack==3.0.0
@@ -89,6 +90,7 @@ pydantic_core==2.20.1
 Pygments==2.18.0
 PyNaCl==1.5.0
 pyparsing==3.1.2
+pypiwin32==223
 PySocks==1.7.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
