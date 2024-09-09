@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renomear Arquivos PDF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Renomear Arquivos PDF</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="arquivos_pdfs">Selecione os arquivos PDFs:</label>
+                <input type="file" class="form-control" id="arquivos_pdfs" name="arquivos_pdfs" multiple>
+            </div>
+            <div class="form-group">
+                <label for="planilha">Selecione a Planilha:</label>
+                <input type="file" class="form-control" id="planilha" name="planilha" accept=".xlsx, .xls">
+            </div>
+            <button type="submit" class="btn btn-primary">Renomear Arquivos</button>
+        </form>
+
+        <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="alert alert-dismissible fade show" role="alert">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
